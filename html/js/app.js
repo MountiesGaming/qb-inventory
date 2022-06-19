@@ -536,7 +536,8 @@ function FormatItemInfo(itemData) {
                     itemData.description +
                     "</p>"
                 );
-            }
+            } 
+            if(itemData.info.evidenceNote !== '' && typeof itemData.info.evidenceNote !== "undefined") $(".item-info-description").prepend("<p><strong>Note: </strong>"+itemData.info.evidenceNote+"</p>");
         } else if (
             itemData.info.costs != undefined &&
             itemData.info.costs != null
